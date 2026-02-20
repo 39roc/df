@@ -1,0 +1,14 @@
+# theme
+theme = Monokai Classic
+
+# font
+font-family = "Monaco"
+
+# split
+split-divider-color = #d4cdbc
+unfocused-split-opacity = 0.6
+
+# padding
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true

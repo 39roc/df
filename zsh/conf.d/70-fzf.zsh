@@ -6,9 +6,9 @@
 command -v fzf &>/dev/null || return 0
 
 # ---------------------------------------------------------------------------
-# 프리뷰 도구 테마 (라이트 터미널용)
+# 프리뷰 도구 테마 (Monokai Classic 터미널용)
 # ---------------------------------------------------------------------------
-export BAT_THEME="GitHub"
+export BAT_THEME="Monokai Extended"
 
 # ---------------------------------------------------------------------------
 # 프리뷰 명령어 헬퍼
@@ -61,11 +61,11 @@ export FZF_DEFAULT_OPTS=" \
   --bind='ctrl-u:preview-half-page-up' \
   --bind='ctrl-d:preview-half-page-down' \
   --bind='ctrl-y:execute-silent(echo -n {+} | pbcopy)+abort' \
-  --color='fg:#4c4f69,bg:-1,hl:#8839ef' \
-  --color='fg+:#4c4f69,bg+:#ccd0da,hl+:#8839ef' \
-  --color='info:#1e66f5,prompt:#1e66f5,pointer:#8839ef' \
-  --color='marker:#40a02b,spinner:#8839ef,header:#1e66f5' \
-  --color='border:#9ca0b0' \
+  --color='fg:#f8f8f2,bg:-1,hl:#f92672' \
+  --color='fg+:#f8f8f2,bg+:#49483e,hl+:#f92672' \
+  --color='info:#a6e22e,prompt:#66d9ef,pointer:#ae81ff' \
+  --color='marker:#a6e22e,spinner:#ae81ff,header:#66d9ef' \
+  --color='border:#75715e' \
 "
 
 # ---------------------------------------------------------------------------

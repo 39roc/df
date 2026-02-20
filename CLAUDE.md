@@ -28,12 +28,15 @@ This is a personal dotfiles repository for managing shell configuration and othe
   - `lua/plugins/` — Plugin specs (one file per plugin or group)
   - `lazyvim.json` — LazyVim extras tracker (auto-managed)
   - `stylua.toml` — Lua formatter config
+- `ghostty/.config/ghostty/` — Ghostty terminal configuration:
+  - `config` — Ghostty settings (theme, font, splits, padding)
 
 ## Deployment
 
 Dotfiles are deployed using [GNU Stow](https://www.gnu.org/software/stow/) and symlinks:
 - `zsh/.zshrc` → `~/.zshrc` (manual symlink; `conf.d/` files are sourced via `$DOTFILES`)
 - `nvim/` → Stow package: `cd ~/df && stow nvim` creates `~/.config/nvim` symlink
+- `ghostty/` → Stow package: `cd ~/df && stow ghostty` creates `~/.config/ghostty` symlink
 
 ## Adding New Tool Configuration
 
