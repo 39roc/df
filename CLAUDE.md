@@ -30,6 +30,12 @@ This is a personal dotfiles repository for managing shell configuration and othe
   - `stylua.toml` — Lua formatter config
 - `ghostty/.config/ghostty/` — Ghostty terminal configuration:
   - `config` — Ghostty settings (theme, font, splits, padding)
+- `claude/.claude/` — Claude Code 글로벌 설정:
+  - `CLAUDE.md` — 글로벌 지침 (모든 프로젝트 공통)
+  - `settings.json` — 글로벌 설정 (플러그인, env, 상태바 등)
+  - `statusline.sh` — 커스텀 상태바 스크립트
+  - `commands/` — 커스텀 슬래시 커맨드
+  - `agents/` — 커스텀 에이전트 정의
 
 ## Deployment
 
@@ -37,6 +43,7 @@ Dotfiles are deployed using [GNU Stow](https://www.gnu.org/software/stow/) and s
 - `zsh/.zshrc` → `~/.zshrc` (manual symlink; `conf.d/` files are sourced via `$DOTFILES`)
 - `nvim/` → Stow package: `cd ~/df && stow nvim` creates `~/.config/nvim` symlink
 - `ghostty/` → Stow package: `cd ~/df && stow ghostty` creates `~/.config/ghostty` symlink
+- `claude/` → Stow package: `cd ~/df && stow claude` creates symlinks inside `~/.claude/`
 
 ## Adding New Tool Configuration
 
