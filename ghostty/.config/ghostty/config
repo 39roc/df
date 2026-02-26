@@ -1,5 +1,5 @@
 # theme
-theme = Monokai Classic
+theme = Github Dark Default
 
 # font
 font-family = "Monaco"
@@ -9,6 +9,9 @@ split-divider-color = #d4cdbc
 unfocused-split-opacity = 0.6
 
 # padding
-window-padding-x = 8
-window-padding-y = 8
+window-padding-x = 16
+window-padding-y = 16
 window-padding-balance = true
+
+# keybind
+keybind = global:cmd+grave_accent=toggle_quick_terminal
