@@ -23,7 +23,7 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "github_dark_default", "tokyonight", "habamax" } },
   checker = {
     enabled = true,
     notify = false,
