@@ -8,3 +8,6 @@ command -v kubectl &>/dev/null && alias k='kubectl'
 
 # Docker Compose
 command -v docker-compose &>/dev/null && alias ds='docker-compose'
+
+# Claude Code (dangerously skip permissions)
+command -v claude &>/dev/null && alias ccd='claude --dangerously-skip-permissions'
