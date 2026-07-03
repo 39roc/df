@@ -8,9 +8,19 @@ if typeset -f prompt_segment >/dev/null; then
 	}
 fi
 
-# AWS profile segment colors (agnoster's built-in prompt_aws shows "AWS: $AWS_PROFILE")
+# AWS profile prompt segment
+# awsp 는 선택 프로필을 [default]로 복사하므로 AWS_PROFILE 이 아닌
+# awsp 가 기록한 원본 이름(~/.aws/.default_source)을 표시한다.
 # 일반 프로필은 녹색, *-prod / *production* 프로필은 빨간색으로 강조하여 실수 방지
-AGNOSTER_AWS_BG=green
-AGNOSTER_AWS_FG=black
-AGNOSTER_AWS_PROD_BG=red
-AGNOSTER_AWS_PROD_FG=yellow
+if typeset -f prompt_segment >/dev/null; then
+	prompt_aws() {
+		[[ "$SHOW_AWS_PROMPT" = false ]] && return
+		local p="$AWS_PROFILE"
+		[[ -z "$p" && -f "$HOME/.aws/.default_source" ]] && p=$(<"$HOME/.aws/.default_source")
+		[[ -z "$p" ]] && return
+		case "$p" in
+			*-prod|*production*) prompt_segment red yellow "AWS: ${p:gs/%/%%}" ;;
+			*) prompt_segment green black "AWS: ${p:gs/%/%%}" ;;
+		esac
+	}
+fi
