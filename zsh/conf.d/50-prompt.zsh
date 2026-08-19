@@ -19,8 +19,8 @@ if typeset -f prompt_segment >/dev/null; then
 		[[ -z "$p" && -f "$HOME/.aws/.default_source" ]] && p=$(<"$HOME/.aws/.default_source")
 		[[ -z "$p" ]] && return
 		case "$p" in
-			*-prod|*production*) prompt_segment red yellow "AWS: ${p:gs/%/%%}" ;;
-			*) prompt_segment green black "AWS: ${p:gs/%/%%}" ;;
+			*-prod|*production*) prompt_segment red yellow "aws: ${p:gs/%/%%}" ;;
+			*) prompt_segment green black "aws: ${p:gs/%/%%}" ;;
 		esac
 	}
 fi
