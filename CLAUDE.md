@@ -17,7 +17,9 @@ This is a personal dotfiles repository for managing shell configuration and othe
   - `40-aliases.zsh` — Custom aliases (k, sdb, ds)
   - `50-prompt.zsh` — Agnoster prompt customization
   - `60-integrations.zsh` — Shell integrations (zoxide, local env)
+  - `70-fzf.zsh` — fzf 키바인딩/완성
   - `75-neovim.zsh` — Neovim settings (EDITOR, aliases)
+  - `80-android.zsh` — Android SDK (ANDROID_HOME, adb/sdkmanager/emulator PATH)
   - `90-sdkman.zsh` — SDKMAN (must be last)
 - `nvim/.config/nvim/` — Neovim configuration (LazyVim distribution):
   - `init.lua` — Entry point (loads config.lazy)
