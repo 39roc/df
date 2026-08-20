@@ -13,7 +13,7 @@ This is a personal dotfiles repository for managing shell configuration and othe
   - `00-omz.zsh` — Oh-my-zsh core (theme, plugins, source)
   - `10-path.zsh` — PATH additions (pnpm, Tizen)
   - `20-nvm.zsh` — Node Version Manager
-  - `30-completions.zsh` — Completion system (AWS, Terraform, Azure, kubectl, Helm)
+  - `30-completions.zsh` — Completion system (AWS, Terraform, Azure, kubectl, Helm, Tailscale)
   - `40-aliases.zsh` — Custom aliases (k, sdb, ds)
   - `50-prompt.zsh` — Agnoster prompt customization
   - `60-integrations.zsh` — Shell integrations (zoxide, local env)

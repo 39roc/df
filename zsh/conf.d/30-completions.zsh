@@ -21,3 +21,6 @@ command -v kubectl &>/dev/null && source <(kubectl completion zsh)
 
 # Helm
 command -v helm &>/dev/null && source <(helm completion zsh)
+
+# Tailscale
+command -v tailscale &>/dev/null && source <(tailscale completion zsh)
