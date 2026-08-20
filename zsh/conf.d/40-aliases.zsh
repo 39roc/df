@@ -40,3 +40,11 @@ awsp() {
 }
 alias awsw='cat "$HOME/.aws/.default_source" 2>/dev/null || echo default'   # 현재 기본 프로필
 alias awsl='aws configure list-profiles'                                    # 프로필 목록
+
+# awsp 프로필 이름 자동완성
+_awsp() {
+	local -a profiles
+	profiles=(${(f)"$(aws configure list-profiles 2>/dev/null)"})
+	_describe -t profiles 'aws profile' profiles
+}
+(( $+functions[compdef] )) && compdef _awsp awsp
